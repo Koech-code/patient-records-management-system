@@ -1,10 +1,19 @@
 body{
   background-color: beige;
+  /* background-image: url("../src/images/hospital-image.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;  */
+}
+
+.bodyData{
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .App {
   margin: auto;
-  width: 50%;
+  width: 100%;
   
 }
 
@@ -36,8 +45,21 @@ body{
   cursor: pointer;
 }
 
+h2{
+  color: blue;
+}
+
 .myList{
   list-style: none;
+}
+
+.myData{
+  box-shadow: 0 4px 8px 0 rgba(45, 235, 8, 0.2);
+  transition: 0.3s;
+  width: 30vw;
+  background-color: black;
+  color: white;
+  font-size: large;
 }
 
 .myListButton{

@@ -72,26 +72,33 @@ class App extends Component {
     this.refs.name.focus();
 
   }
+  
   render(){
     let datas=this.state.datas;
     return (
       <div className="App">
         <h2>{this.state.title}</h2>
-        <form ref="myForm" className="myForm">
-          <input type="text" ref="name" placeholder="Your name" className="formField" />
-          <input type="text" ref="address" placeholder="Your email address" className="formField" />
-          <button onClick={this.fSubmit} className="myButton">Submit</button>
-        </form>
-        <pre>
-           {
-            datas.map((data, i) =>
-            <li key={i} className="myList">
-              {i+1}. {data.name} {data.address}
-                <button onClick={()=>this.fRemove(i)} className="myListButton">remove</button>
-                <button onClick={()=>this.fEdit(i)} className="myListButton">edit</button>
-            </li>
-            )}
-        </pre>
+        <div className="bodyData">
+          <div className="tableData">
+            <pre className="myData">
+            {
+              datas.map((data, i) =>
+              <li key={i} className="myList">
+                {i+1}. {data.name} {data.address}
+                  <button onClick={()=>this.fRemove(i)} className="myListButton"><i class="fa fa-trash-o"></i></button>
+                  <button onClick={()=>this.fEdit(i)} className="myListButton"><i class="fa fa-edit"></i></button>
+              </li>
+              )}
+            </pre>
+          </div>
+          <div className="inputFields">
+            <form ref="myForm" className="myForm">
+              <input type="text" ref="name" placeholder="Your name" className="formField" />
+              <input type="email" ref="address" placeholder="Your email address" className="formField" />
+              <button onClick={this.fSubmit} className="myButton">Submit</button>
+            </form>
+          </div>
+        </div>
       </div>
     );
 
