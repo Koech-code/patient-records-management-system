@@ -73,6 +73,7 @@ class App extends Component {
 
   }
   
+
   render(){
     let datas=this.state.datas;
     return (
@@ -106,3 +107,6 @@ class App extends Component {
   }
 
 export default App;
+
+
+
