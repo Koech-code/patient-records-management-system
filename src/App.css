@@ -9,6 +9,7 @@ body{
 .bodyData{
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .App {
@@ -58,9 +59,25 @@ h2{
   box-shadow: 0 4px 8px 0 rgba(45, 235, 8, 0.2);
   transition: 0.3s;
   width: 30vw;
-  background-color: black;
+  background-color: cadetblue;
   color: white;
   font-size: large;
+}
+
+@media screen and (max-width: 600px){
+  .myData{
+    transition: 0.5s;
+    width: 100%;
+    background-color: cadetblue;
+    color: white;
+    font-size: large;
+  }
+  .myForm{
+    width: 100%;
+    background-color: #dfe6e9;
+    border-radius: 5px;
+    padding: 20px;
+  }
 }
 
 .myListButton{
@@ -71,3 +88,15 @@ h2{
   border: 1px solid green;
   margin: 3px 5px;
 }
+
+.delete{
+  color: red;
+  margin-right: 10px;
+  margin-left: 30px;
+  border-radius: 5px;
+}
+
+.edit{
+  color: yellowgreen;
+}
+
