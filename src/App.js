@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-
 import './App.css';
+
 
 class App extends Component {
   constructor(props) {
@@ -86,17 +86,19 @@ class App extends Component {
               datas.map((data, i) =>
               <li key={i} className="myList">
                 {i+1}. {data.name} {data.address}
-                  <button onClick={()=>this.fRemove(i)} className="myListButton"><i class="fa fa-trash-o"></i></button>
-                  <button onClick={()=>this.fEdit(i)} className="myListButton"><i class="fa fa-edit"></i></button>
+                  <i onClick={()=>this.fRemove(i)} className="delete" class="fa fa-trash-o" style={{color: 'red', marginLeft: '5%', marginRight: '2%'}}></i>
+                  <i onClick={()=>this.fEdit(i)} className="edit" class="fa fa-edit" style={{color: 'purple'}}></i>
               </li>
               )}
             </pre>
           </div>
+          
           <div className="inputFields">
             <form ref="myForm" className="myForm">
               <input type="text" ref="name" placeholder="Your name" className="formField" />
               <input type="email" ref="address" placeholder="Your email address" className="formField" />
               <button onClick={this.fSubmit} className="myButton">Submit</button>
+              
             </form>
           </div>
         </div>
